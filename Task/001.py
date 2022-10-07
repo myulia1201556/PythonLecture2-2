@@ -7,15 +7,17 @@
 
 
 from decimal import Decimal
-
+ 
 number = input("Введите число: ")
 d = input("Введите число с точностью d: ")
+
 
 def num_precision(num, d):
     num = Decimal(num)
     num = num.quantize(Decimal(d))
 
     return num
+
 
 print(num_precision(number, d))    
 
