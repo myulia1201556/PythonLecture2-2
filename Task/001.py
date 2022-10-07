@@ -8,11 +8,23 @@
 
 from decimal import Decimal
 
+number = input("Введите число: ")
+d = input("Введите число с точностью d: ")
 
-def required_accuracy(count):
-    print("Enter the required accuracy '0.0001':")
-    count = count.quantize(Decimal(input()))
-    print(count)
+def num_precision(num, d):
+    num = Decimal(num)
+    num = num.quantize(Decimal(d))
 
-print ('Enter a real number:')
-required_accuracy(Decimal(input()))
+    return num
+
+print(num_precision(number, d))    
+
+# from math import pi
+# from decimal import Decimal
+
+# num = str(pi)  в данном случае программа работает над числом пи
+# num = input("Введите число: ") программа работает с заданным числом пользователя
+# d = input("Введите число с точностью d: ")
+
+# print(Decimal(num).quantize(Decimal(d)))
+
