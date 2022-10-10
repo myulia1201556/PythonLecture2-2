@@ -27,4 +27,3 @@ def polynomial(num: int):
 
 for _ in range(3):      
     polynomial(int(input()))
-
