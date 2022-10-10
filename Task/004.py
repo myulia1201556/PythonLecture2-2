@@ -16,7 +16,7 @@ def polynomial(num: int):
         return 0
 
     poly = ""
-    num_list = range(0, 10)
+    num_list = range(-100, 100)
 
     with open("poly.txt", "a", encoding="utf-8") as my_f:
         for i in range(num, 0, -1):
