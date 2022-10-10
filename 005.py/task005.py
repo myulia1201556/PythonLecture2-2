@@ -9,21 +9,18 @@
 from random import choice
 
 
-def polynomial(num: int):
-    if num < 1:
-        return 0
+def poly_sum(poly: str, text: str):
+    with open(poly, "r", encoding="utf-8") as my_f_1, \
+            open(text, "r", encoding="utf-8") as my_f_2:
+        first = my_f_1.readlines()
+        second = my_f_2.readlines()
 
-    poly = ""
-    num_list = range(-100, 100)
-
-    with open("poly.txt", "a", encoding="utf-8") as my_f:
-        for i in range(num, 0, -1):
-            value = choice(num_list)
-            if value:
-                poly += f"{value}*x^{i} {choice('+-')} "
-
-        my_f.write(f"{poly}{choice(num_list)} = 0\n")
+        if len(first) == len(second):
+            with open("sum_poly.txt", "a", encoding="utf-8") as my_f_3:
+                for i, v in enumerate(first):
+                    my_f_3.write(f"{v[:-5]} + {second[i]}")
+        else:
+            print("The contents of the files do not match!")
 
 
-for _ in range(3):      
-    polynomial(int(input()))
+poly_sum("poly.txt", "text.txt")  
