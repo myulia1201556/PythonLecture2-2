@@ -7,7 +7,6 @@
 # k=2 -> 2x² + 4x + 5 = 0 или x² + 5 = 0 или 10x² = 0
 # k=5 -> 3x⁵ + 5x⁴ - 6x³ - 3x = 0
 
-
 from random import choice
 
 
