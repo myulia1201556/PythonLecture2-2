@@ -9,9 +9,9 @@
 from random import choice
 
 
-def poly_sum(poly: str, text: str):
-    with open(poly, "r", encoding="utf-8") as my_f_1, \
-            open(text, "r", encoding="utf-8") as my_f_2:
+def poly_sum(name_1: str, name_2: str):
+    with open(name_1, "r", encoding="utf-8") as my_f_1, \
+            open(name_2, "r", encoding="utf-8") as my_f_2:
         first = my_f_1.readlines()
         second = my_f_2.readlines()
 
@@ -23,4 +23,5 @@ def poly_sum(poly: str, text: str):
             print("The contents of the files do not match!")
 
 
-poly_sum("poly.txt", "text.txt")  
+# poly_sum(input("Enter the file name 'poly.txt': "), input("Enter the file name 'poly_2.txt': "))
+poly_sum("poly.txt", "poly_2.txt")
